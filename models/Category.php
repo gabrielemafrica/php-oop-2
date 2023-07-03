@@ -2,22 +2,22 @@
 
 //new class product
 class Category {
-    private $category;
+    private $categoryName;
     private $icon;
 
 
-    public function __construct($category, $icon) {
+    public function __construct($categoryName, $icon) {
 
-        $this -> setCategory($category);
+        $this -> setCategory($categoryName);
         $this -> setIcon($icon);
     }
 
     //get and set
-    public function getCategory() {
-        return $this -> category;
+    public function getCategoryName() {
+        return $this -> categoryName;
     }
-    public function setCategory($category) {
-        $this -> category = $category;
+    public function setCategory($categoryName) {
+        $this -> categoryName = $categoryName;
     }
     public function getIcon() {
         return $this -> icon;

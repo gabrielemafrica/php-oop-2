@@ -7,15 +7,17 @@ class Product {
     private $imgURL;
     private $type;
     private $inStock;
+    private $description;
     private Category $category;
 
-    public function __construct($name, $price, $imgURL, $type, $inStock, Category $category) {
+    public function __construct($name, $price, $imgURL, $type, $inStock, $description, Category $category) {
 
         $this -> setName($name);
         $this -> setPrice($price);
         $this -> setImgURL($imgURL);
         $this -> setType($type);
         $this -> setInStock($inStock);
+        $this -> setDescription($description);
         $this -> setCategory($category);
     }
 
@@ -50,6 +52,12 @@ class Product {
     }
     public function setInStock($inStock) {
         $this -> inStock = $inStock;
+    }
+    public function getDescription() {
+        return $this -> description;
+    }
+    public function setDescription($description) {
+        $this -> description = $description;
     }
     public function getCategory() {
         return $this -> category;
