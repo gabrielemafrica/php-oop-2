@@ -5,13 +5,15 @@ class Product {
     private $name;
     private $price;
     private $imgURL;
+    private $type;
     private Category $category;
 
-    public function __construct($name, $price, $imgURL, $category) {
+    public function __construct($name, $price, $imgURL, $type, Category $category) {
 
         $this -> setName($name);
         $this -> setPrice($price);
         $this -> setImgURL($imgURL);
+        $this -> setType($type);
         $this -> setCategory($category);
     }
 
@@ -33,6 +35,12 @@ class Product {
     }
     public function setImgURL($imgURL) {
         $this -> imgURL = $imgURL;
+    }
+    public function getType() {
+        return $this -> type;
+    }
+    public function setType($type) {
+        $this -> type = $type;
     }
     public function getCategory() {
         return $this -> category;
